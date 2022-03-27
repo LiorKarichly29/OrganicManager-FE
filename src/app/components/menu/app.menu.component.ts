@@ -28,7 +28,7 @@ export class AppMenuComponent implements OnInit {
             ///////////////////////////////////////////
             // Template Menu - Items and elements
             ///////////////////////////////////////////
-            {label: 'Freya Template', routerLink: ['/'],  items: [
+            {label: 'Freya Template', routerLink: ['/template'],  items: [
             {label: 'Dashboard', icon: 'pi pi-home', routerLink: ['/template-dashboard']},
             {
                 label: 'UI Kit', icon: 'pi pi-star', routerLink: ['/uikit'],
