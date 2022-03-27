@@ -4,7 +4,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
-import {AppRoutingModule} from './app-routing.module';
+import {AppRoutingModule} from './routing/app-routing.module';
 
 import {AccordionModule} from 'primeng/accordion';
 import {AutoCompleteModule} from 'primeng/autocomplete';
@@ -86,60 +86,63 @@ import {TreeModule} from 'primeng/tree';
 import {TreeTableModule} from 'primeng/treetable';
 import {VirtualScrollerModule} from 'primeng/virtualscroller';
 
-import {AppCodeModule} from './blocks/app-code/app.code.component';
+import {AppCodeModule} from '../assets/template-blocks/app-code/app.code.component';
 import {AppComponent} from './app.component';
 import {AppMainComponent} from './app.main.component';
 import {AppConfigComponent} from './app.config.component';
-import {AppRightpanelComponent} from './app.rightpanel.component';
-import {AppMenuComponent} from './app.menu.component';
-import {AppMenuitemComponent} from './app.menuitem.component';
-import {AppTopBarComponent} from './app.topbar.component';
-import {AppFooterComponent} from './app.footer.component';
-import {DashboardDemoComponent} from './demo/view/dashboarddemo.component';
-import {FormLayoutDemoComponent} from './demo/view/formlayoutdemo.component';
-import {FloatLabelDemoComponent} from './demo/view/floatlabeldemo.component';
-import {InvalidStateDemoComponent} from './demo/view/invalidstatedemo.component';
-import {InputDemoComponent} from './demo/view/inputdemo.component';
-import {ButtonDemoComponent} from './demo/view/buttondemo.component';
-import {TableDemoComponent} from './demo/view/tabledemo.component';
-import {ListDemoComponent} from './demo/view/listdemo.component';
-import {AppTimelineDemoComponent} from './pages/app.timelinedemo.component';
-import {TreeDemoComponent} from './demo/view/treedemo.component';
-import {PanelsDemoComponent} from './demo/view/panelsdemo.component';
-import {OverlaysDemoComponent} from './demo/view/overlaysdemo.component';
-import {MediaDemoComponent} from './demo/view/mediademo.component';
-import {MenusComponent} from './demo/view/menus/menus.component';
-import {MessagesDemoComponent} from './demo/view/messagesdemo.component';
-import {MiscDemoComponent} from './demo/view/miscdemo.component';
-import {EmptyDemoComponent} from './demo/view/emptydemo.component';
-import {ChartsDemoComponent} from './demo/view/chartsdemo.component';
-import {FileDemoComponent} from './demo/view/filedemo.component';
-import {DocumentationComponent} from './demo/view/documentation.component';
-import {IconsComponent} from './utilities/icons.component';
-import {AppCrudComponent} from './pages/app.crud.component';
-import {AppCalendarComponent} from './pages/app.calendar.component';
-import {AppInvoiceComponent} from './pages/app.invoice.component';
-import {AppHelpComponent} from './pages/app.help.component';
-import {AppNotfoundComponent} from './pages/app.notfound.component';
-import {AppErrorComponent} from './pages/app.error.component';
-import {AppAccessdeniedComponent} from './pages/app.accessdenied.component';
-import {AppLoginComponent} from './pages/app.login.component';
-import {BlocksComponent} from './blocks/blocks/blocks.component';
-import {BlockViewer} from './blocks/blockviewer/blockviewer.component';
+import {AppRightpanelComponent} from './components/right-panel/app.rightpanel.component';
+import {AppMenuComponent} from './components/menu/app.menu.component';
+import {AppMenuitemComponent} from './components/menu/app.menuitem.component';
+import {AppTopBarComponent} from './components/top-bar/app.topbar.component';
+import {AppFooterComponent} from './components/footer/app.footer.component';
+import {DashboardDemoComponent} from '../assets/template-elements/dashboarddemo.component';
+import {FormLayoutDemoComponent} from '../assets/template-elements/formlayoutdemo.component';
+import {FloatLabelDemoComponent} from '../assets/template-elements/floatlabeldemo.component';
+import {InvalidStateDemoComponent} from '../assets/template-elements/invalidstatedemo.component';
+import {InputDemoComponent} from '../assets/template-elements/inputdemo.component';
+import {ButtonDemoComponent} from '../assets/template-elements/buttondemo.component';
+import {TableDemoComponent} from '../assets/template-elements/tabledemo.component';
+import {ListDemoComponent} from '../assets/template-elements/listdemo.component';
+import {AppTimelineDemoComponent} from '../assets/template-pages/app.timelinedemo.component';
+import {TreeDemoComponent} from '../assets/template-elements/treedemo.component';
+import {PanelsDemoComponent} from '../assets/template-elements/panelsdemo.component';
+import {OverlaysDemoComponent} from '../assets/template-elements/overlaysdemo.component';
+import {MediaDemoComponent} from '../assets/template-elements/mediademo.component';
+import {MenusComponent} from './components/menus/menus.component';
+import {MessagesDemoComponent} from '../assets/template-elements/messagesdemo.component';
+import {MiscDemoComponent} from '../assets/template-elements/miscdemo.component';
+import {EmptyDemoComponent} from '../assets/template-elements/emptydemo.component';
+import {ChartsDemoComponent} from '../assets/template-elements/chartsdemo.component';
+import {FileDemoComponent} from '../assets/template-elements/filedemo.component';
+import {DocumentationComponent} from '../assets/template-elements/documentation.component';
+import {IconsComponent} from '../assets/template-elements/icons.component';
+import {AppCrudComponent} from '../assets/template-pages/app.crud.component';
+import {AppCalendarComponent} from '../assets/template-pages/app.calendar.component';
+import {AppInvoiceComponent} from '../assets/template-pages/app.invoice.component';
+import {AppHelpComponent} from '../assets/template-pages/app.help.component';
+import {AppNotfoundComponent} from '../assets/template-pages/app.notfound.component';
+import {AppErrorComponent} from '../assets/template-pages/app.error.component';
+import {AppAccessdeniedComponent} from '../assets/template-pages/app.accessdenied.component';
+import {AppLoginComponent} from '../assets/template-pages/app.login.component';
+import {BlocksComponent} from '../assets/template-blocks/blocks/blocks.component';
+import {BlockViewer} from '../assets/template-blocks/blockviewer/blockviewer.component';
 
-import {CountryService} from './demo/service/countryservice';
-import {CustomerService} from './demo/service/customerservice';
-import {EventService} from './demo/service/eventservice';
-import {IconService} from './demo/service/iconservice';
-import {NodeService} from './demo/service/nodeservice';
-import {PhotoService} from './demo/service/photoservice';
-import {ProductService} from './demo/service/productservice';
-import {MenuService} from './app.menu.service';
-import {ConfigService} from './demo/service/app.config.service';
+import {CountryService} from './utilities/services/countryservice';
+import {CustomerService} from './utilities/services/customerservice';
+import {EventService} from './utilities/services/eventservice';
+import {IconService} from './utilities/services/iconservice';
+import {NodeService} from './utilities/services/nodeservice';
+import {PhotoService} from './utilities/services/photoservice';
+import {ProductService} from './utilities/services/productservice';
+import {MenuService} from './components/menu/app.menu.service';
+import {ConfigService} from './utilities/services/app.config.service';
 
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+
+
 
 FullCalendarModule.registerPlugins([
     dayGridPlugin,
@@ -275,7 +278,8 @@ FullCalendarModule.registerPlugins([
         AppTimelineDemoComponent,
         AppAccessdeniedComponent,
         BlocksComponent,
-        BlockViewer
+        BlockViewer,
+        DashboardComponent
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},

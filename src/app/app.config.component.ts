@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {AppComponent} from './app.component';
 import {AppMainComponent} from './app.main.component';
-import {ConfigService} from './demo/service/app.config.service';
-import {AppConfig} from './demo/domain/appconfig';
+import {ConfigService} from './utilities/services/app.config.service';
+import {AppConfig} from './utilities/interfaces/appconfig';
 import {Subscription} from 'rxjs';
 @Component({
     selector: 'app-config',

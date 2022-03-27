@@ -4,9 +4,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppMainComponent } from './app.main.component';
 import { AppConfigComponent } from './app.config.component';
-import { AppTopBarComponent } from './app.topbar.component';
-import { AppFooterComponent } from './app.footer.component';
-import { AppMenuComponent } from './app.menu.component';
+import { AppTopBarComponent } from './components/top-bar/app.topbar.component';
+import { AppFooterComponent } from './components/footer/app.footer.component';
+import { AppMenuComponent } from './components/menu/app.menu.component';
 
 describe('AppComponent', () => {
     beforeEach(async(() => {

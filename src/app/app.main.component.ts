@@ -1,17 +1,16 @@
-import {Component} from '@angular/core';
-import {MenuService} from './app.menu.service';
-import {PrimeNGConfig} from 'primeng/api';
-import {AppComponent} from './app.component';
+import { Component } from '@angular/core';
+import { MenuService } from './components/menu/app.menu.service';
+import { PrimeNGConfig } from 'primeng/api';
+import { AppComponent } from './app.component';
 
 @Component({
     selector: 'app-main',
     templateUrl: './app.main.component.html',
 })
 export class AppMainComponent {
+    sidebarStatic: boolean = true;
 
-    sidebarStatic: boolean;
-
-    sidebarActive = false;
+    sidebarActive = true;
 
     staticMenuMobileActive: boolean;
 
@@ -37,8 +36,11 @@ export class AppMainComponent {
 
     menuHoverActive = false;
 
-    constructor(private menuService: MenuService, private primengConfig: PrimeNGConfig, public app: AppComponent) {
-    }
+    constructor(
+        private menuService: MenuService,
+        private primengConfig: PrimeNGConfig,
+        public app: AppComponent
+    ) {}
 
     onLayoutClick() {
         if (!this.topbarItemClick) {
@@ -183,8 +185,15 @@ export class AppMainComponent {
         if (document.body.classList) {
             document.body.classList.remove('blocked-scroll');
         } else {
-            document.body.className = document.body.className.replace(new RegExp('(^|\\b)' +
-                'blocked-scroll'.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+            document.body.className = document.body.className.replace(
+                new RegExp(
+                    '(^|\\b)' +
+                        'blocked-scroll'.split(' ').join('|') +
+                        '(\\b|$)',
+                    'gi'
+                ),
+                ' '
+            );
         }
     }
 }
